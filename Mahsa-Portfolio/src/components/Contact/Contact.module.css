@@ -1,0 +1,63 @@
+@import "../../vars.css";
+
+.container {
+  color: var(--color-text); /* Preserved for text color consistency */
+  margin-top: 60px; /* Reduced for a balanced top space */
+  background-color: var(--color-background); /* Assuming a more neutral background variable for professionalism */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Adjusted for a clean, balanced spacing */
+  width: 100vw;
+  padding: 40px 8%; /* Adjusted padding for a cleaner look and less width percentage for content focus */
+  gap: 20px; /* Adjusted gap for cleaner spacing */
+}
+
+.text h2 {
+  font-size: 48px; /* Slightly reduced for professional subtlety */
+  font-weight: bold; /* Ensuring boldness for headings */
+  letter-spacing: normal; /* Reduced to improve readability */
+  margin-bottom: 20px; /* Added space between the heading and paragraph */
+}
+
+.text p {
+  font-size: 24px; /* Reduced for readability and professional appearance */
+  font-weight: 300; /* Lighter weight for a refined look */
+  letter-spacing: normal; /* Reduced to improve readability */
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  gap: 20px; /* Adjusted for a more compact look */
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Reduced for closer icon-text relation */
+}
+
+.link a {
+  color: var(--color-primary); /* Assuming --color-primary is defined, for a subtle highlight */
+  text-decoration: none;
+  font-size: 26px; /* Slightly reduced for a more standard look */
+  font-weight: 400;
+  letter-spacing: normal; /* Reduced to improve readability */
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column;
+    gap: 20px; /* Adjusted for consistent spacing in mobile view */
+  }
+
+  .text, .links {
+    align-items: center; /* Centered alignment for a cohesive mobile experience */
+  }
+
+  .text h2, .text p, .link a {
+    text-align: center; /* Ensuring text is centered in mobile view */
+  }
+}

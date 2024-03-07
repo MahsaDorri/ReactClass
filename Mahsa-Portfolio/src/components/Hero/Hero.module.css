@@ -1,0 +1,225 @@
+@import "../../vars.css";
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 49px;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-text);
+  z-index: 1;
+}
+
+.title {
+  font-size: 72px;
+  font-weight: 900;
+  margin-bottom: 33px;
+  font-family: var(--font-roboto);
+  background: linear-gradient(
+    90deg,
+    rgb(220, 116, 197) 70%,
+    rgba(255, 255, 255, 0) 120%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.description {
+  font-size: 30px;
+  font-family: var(--font-roboto);
+  margin-bottom: 52px;
+}
+
+.contactBtn {
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border-radius: 100px;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 17px 26px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.heroImg {
+  width: 50%;
+  z-index: 1;
+
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.topBlur {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  min-width: 350px;
+  min-width: 350px;
+  top: -128px;
+  left: -10vw;
+  border-radius: 764px;
+  background: rgba(25, 55, 109, 0.7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.bottomBlur {
+  position: absolute;
+  width: 70vw;
+  height: 50vw;
+  min-width: 350px;
+  min-width: 250px;
+  top: 246px;
+  right: -25vw;
+  border-radius: 764px;
+  background: rgba(25, 55, 109, 0.7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column-reverse;@import "../../vars.css";
+
+    .container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px; /* Slightly reduced for a tighter layout */
+      z-index: 1;
+      margin-left: 5%; /* Reduced for a wider content area */
+      margin-right: 5%; /* Consistent with the left margin */
+    }
+    
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: var(--color-text);
+      z-index: 1;
+    }
+    
+    .title {
+      font-size: 48px; /* Adjusted for readability and professional scale */
+      font-weight: bold; /* Maintained boldness for impact */
+      margin-bottom: 20px; /* Adjusted for a cleaner spacing */
+      font-family: var(--font-roboto);
+      background: linear-gradient(90deg, rgb(220, 116, 197) 70%, rgba(255, 255, 255, 0) 100%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-align: left; /* Ensures alignment is consistent */
+    }
+    
+    .description {
+      font-size: 24px; /* Adjusted for a more standard reading experience */
+      font-family: var(--font-roboto);
+      margin-bottom: 30px; /* Adjusted spacing */
+      text-align: left; /* Consistent text alignment */
+    }
+    
+    .contactBtn {
+      text-decoration: none;
+      background-color: var(--color-primary);
+      color: var(--color-text);
+      border-radius: 50px; /* Adjusted for a modern rounded look */
+      font-size: 24px; /* Adjusted for accessibility */
+      font-weight: 500; /* Adjusted weight for a sleeker look */
+      padding: 10px 20px; /* Adjusted padding for a more compact button */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Subtler shadow for depth */
+    }
+    
+    .heroImg {
+      width: 40%; /* Adjusted for balance in the layout */
+      z-index: 1;
+      animation: floating 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(0, 10px);
+      }
+    }
+    
+    .topBlur, .bottomBlur {
+      position: absolute;
+      border-radius: 764px;
+      background: rgba(25, 55, 109, 0.6); /* Slightly lighter for a subtler effect */
+      filter: blur(80px); /* Reduced blur for a cleaner look */
+      z-index: 0;
+    }
+    
+    .topBlur {
+      width: 45vw; /* Adjusted for design balance */
+      height: 45vw; /* Match width for symmetry */
+      top: -100px; /* Adjusted for placement */
+      left: -5vw; /* Adjusted for alignment */
+    }
+    
+    .bottomBlur {
+      width: 60vw; /* Adjusted for design balance */
+      height: 45vw; /* Adjusted to match other blur shape */
+      top: 200px; /* Adjusted for placement */
+      right: -20vw; /* Adjusted for alignment */
+    }
+    
+    @media screen and (max-width: 830px) {
+      .container {
+        flex-direction: column-reverse;
+        margin-left: 2%; /* Adjusted for screen size */
+        margin-right: 2%; /* Consistent with left margin */
+      }
+    
+      .content, .heroImg {
+        align-items: center; /* Centered content for mobile layout */
+        width: 100%; /* Full width for mobile screens */
+      }
+    
+      .title, .description, .contactBtn {
+        text-align: center; /* Ensures text elements are centered */
+      }
+    
+      .heroImg {
+        order: -1; /* Ensures image is above content */
+        width: 80%; /* Increased size for visual emphasis */
+      }
+    
+      .topBlur, .bottomBlur {
+        display: none; /* Optional: hides blur effects for cleaner mobile appearance */
+      }
+    }
+    
+  }
+
+  .content {
+    align-items: center;
+  }
+}

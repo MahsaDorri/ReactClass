@@ -1,0 +1,89 @@
+@import "../../vars.css";
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px; /* Adjusted for a more compact look */
+  z-index: 2;
+  margin: 0 8%; /* Slightly reduced for a wider screen usage */
+}
+
+.title {
+  font-size: 24px; /* Adjusted for subtlety */
+  font-weight: bold; /* Ensured visibility and importance */
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.menuBtn {
+  display: none;
+  cursor: pointer; /* Ensures it's obvious it's clickable when shown */
+}
+
+.menu {
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+}
+
+.menuItems {
+  display: flex;
+  gap: 30px; /* Adjusted for a more streamlined look */
+  list-style: none;
+}
+
+.menuItems a {
+  font-size: 20px; /* Adjusted for harmonious design */
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 5px 10px; /* Padding added for touch targets */
+  border-radius: 5px; /* Added for a subtle touch of style */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.menuItems a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+@media screen and (max-width: 830px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 15px; /* Adjusted for mobile */
+  }
+
+  .menuBtn {
+    display: block;
+    position: absolute; /* Ensures button is positioned correctly */
+    right: 8%; /* Adjusted to match the navbar margin */
+    top: 15px; /* Positions button correctly within the navbar */
+  }
+
+  .menu {
+    display: none; /* Initially hidden on mobile */
+  }
+
+  .menuOpen {
+    display: flex; /* Displays the menu when open */
+    position: absolute;
+    top: 60px; /* Adjusted to clear the navbar */
+    right: 8%; /* Aligns with the rest of the navbar content */
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 11px;
+    z-index: 3;
+    background: rgba(25, 55, 109, 0.95); /* More opaque for readability */
+    border-radius: 10px;
+    padding: 20px; /* Adjusted for a neater appearance */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced for better visibility */
+    width: auto; /* Ensures the menu fits its content */
+  }
+
+  .menuOpen .menuItems {
+    display: flex; /* Adjusted to show the items */
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Adjusted for spacing */
+  }
+}
